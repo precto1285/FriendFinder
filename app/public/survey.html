@@ -1,4 +1,4 @@
-<!doctype html>
+<!-- <!doctype html> -->
 <html lang="en">
   <head>
     <!-- Required meta tags -->
@@ -6,32 +6,261 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
+    <script src="https://code.jquery.com/jquery.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
     <title>Friend Finder Survey</title>
   </head>
   <body>
+  
+  <div class="container">
+
     <h1>Friend Finder Survey</h1>
 
     <form>
         <h2>About You</h2>
         <div class="form-group">
           <label for="exampleInputEmail1">Name (Required)</label>
-          <input class="form-control" id="nameInput" aria-describedby="emailHelp" placeholder="Name">
+          <input class="form-control" id="name" aria-describedby="emailHelp" placeholder="Name">
         </div>
         <div class="form-group">
           <label for="exampleInputPassword1">Link to Photo Image (Required)</label>
-          <input class="form-control" id="linkInput" placeholder="Photo Link">
+          <input class="form-control" id="photo" placeholder="Photo Link">
         </div>
-        <select class="form-control">
-            <option>Default select</option>
-        </select>
-        <button type="submit" class="btn btn-primary">Submit</button>
-      </form>
+        <div>
+          <h3><strong>Question 1</strong></h3>
+          <small id="emailHelp" class="form-text text-muted">On a scale from 1 (Strongly Disagree) to 5 (Strongly Agree)...</small>
+          <label for="formGroupExampleInput">I find it easy to relate to others</label>
+          <select class="form-control" id="q1">
+              <option value="" selected>--Select Value--</option>
+              <option value="1">1 - Strongly Disagree</option>
+              <option value="2">2</option>
+              <option value="3">3 - Neutral</option>
+              <option value="4">4</option>
+              <option value="5">5 - Strongly Agree</option>
+          </select>
+        </div>
+        <div>
+          <h3><strong>Question 2</strong></h3>
+          <small id="emailHelp" class="form-text text-muted">On a scale from 1 (Strongly Disagree) to 5 (Strongly Agree)...</small>
+          <label for="formGroupExampleInput">I prefer to have a small circle of friends.</label>
+          <select class="form-control" id="q2">
+              <option value="" selected>--Select Value--</option>
+              <option value="1">1 - Strongly Disagree</option>
+              <option value="2">2</option>
+              <option value="3">3 - Neutral</option>
+              <option value="4">4</option>
+              <option value="5">5 - Strongly Agree</option>
+          </select>
+        </div>
+        <div>
+          <h3><strong>Question 3</strong></h3>
+          <small id="emailHelp" class="form-text text-muted">On a scale from 1 (Strongly Disagree) to 5 (Strongly Agree)...</small>
+          <label for="formGroupExampleInput">I am comfortable asking for help from others when needed.</label>
+          <select class="form-control" id="q3">
+              <option value="" selected>--Select Value--</option>
+              <option value="1">1 - Strongly Disagree</option>
+              <option value="2">2</option>
+              <option value="3">3 - Neutral</option>
+              <option value="4">4</option>
+              <option value="5">5 - Strongly Agree</option>
+          </select>
+        </div>
+        <div>
+          <h3><strong>Question 4</strong></h3>
+          <small id="emailHelp" class="form-text text-muted">On a scale from 1 (Strongly Disagree) to 5 (Strongly Agree)...</small>
+          <label for="formGroupExampleInput">In my day to day interactions, I want everyone to like me.</label>
+          <select class="form-control" id="q4">
+              <option value="" selected>--Select Value--</option>
+              <option value="1">1 - Strongly Disagree</option>
+              <option value="2">2</option>
+              <option value="3">3 - Neutral</option>
+              <option value="4">4</option>
+              <option value="5">5 - Strongly Agree</option>
+          </select>
+        </div>
+        <div>
+          <h3><strong>Question 5</strong></h3>
+          <small id="emailHelp" class="form-text text-muted">On a scale from 1 (Strongly Disagree) to 5 (Strongly Agree)...</small>
+          <label for="formGroupExampleInput">I prefer to confront others early on when conflict arises.</label>
+          <select class="form-control" id="q5">
+              <option value="" selected>--Select Value--</option>
+              <option value="1">1 - Strongly Disagree</option>
+              <option value="2">2</option>
+              <option value="3">3 - Neutral</option>
+              <option value="4">4</option>
+              <option value="5">5 - Strongly Agree</option>
+          </select>
+        </div>
+        <div>
+          <h3><strong>Question 6</strong></h3>
+          <small id="emailHelp" class="form-text text-muted">On a scale from 1 (Strongly Disagree) to 5 (Strongly Agree)...</small>
+          <label for="formGroupExampleInput">In conversations, I take on the listener role more often than not.</label>
+          <select class="form-control" id="q6">
+              <option value="" selected>--Select Value--</option>
+              <option value="1">1 - Strongly Disagree</option>
+              <option value="2">2</option>
+              <option value="3">3 - Neutral</option>
+              <option value="4">4</option>
+              <option value="5">5 - Strongly Agree</option>
+          </select>
+        </div>
+        <div>
+        <div>
+          <h3><strong>Question 7</strong></h3>
+          <small id="emailHelp" class="form-text text-muted">On a scale from 1 (Strongly Disagree) to 5 (Strongly Agree)...</small>
+          <label for="formGroupExampleInput">When I am stressed or worried, I tend to bottle up my feelings so people do not worry about me.</label>
+          <select class="form-control" id="q7">
+              <option value="" selected>--Select Value--</option>
+              <option value="1">1 - Strongly Disagree</option>
+              <option value="2">2</option>
+              <option value="3">3 - Neutral</option>
+              <option value="4">4</option>
+              <option value="5">5 - Strongly Agree</option>
+          </select>
+        </div>
+        <div>
+          <h3><strong>Question 8</strong></h3>
+          <small id="emailHelp" class="form-text text-muted">On a scale from 1 (Strongly Disagree) to 5 (Strongly Agree)...</small>
+          <label for="formGroupExampleInput">For me, work ends at the end of the work day and rarely follows me home.</label>
+          <select class="form-control" id="q8">
+              <option value="" selected>--Select Value--</option>
+              <option value="1">1 - Strongly Disagree</option>
+              <option value="2">2</option>
+              <option value="3">3 - Neutral</option>
+              <option value="4">4</option>
+              <option value="5">5 - Strongly Agree</option>
+          </select>
+        </div>
+        <div>
+          <h3><strong>Question 9</strong></h3>
+          <small id="emailHelp" class="form-text text-muted">On a scale from 1 (Strongly Disagree) to 5 (Strongly Agree)...</small>
+          <label for="formGroupExampleInput">I had a positive interaction with my TA this week</label>
+          <select class="form-control" id="q9">
+              <option value="" selected>--Select Value--</option>
+              <option value="1">1 - Strongly Disagree</option>
+              <option value="2">2</option>
+              <option value="3">3 - Neutral</option>
+              <option value="4">4</option>
+              <option value="5">5 - Strongly Agree</option>
+          </select>
+        </div>
+        <div>
+          <h3><strong>Question 10</strong></h3>
+          <small id="emailHelp" class="form-text text-muted">On a scale from 1 (Strongly Disagree) to 5 (Strongly Agree)...</small>
+          <label for="formGroupExampleInput">I am an awesome developer!</label>
+          <select class="form-control" id="q10">
+              <option value="" selected>--Select Value--</option>
+              <option value="1">1 - Strongly Disagree</option>
+              <option value="2">2</option>
+              <option value="3">3 - Neutral</option>
+              <option value="4">4</option>
+              <option value="5">5 - Strongly Agree</option>
+          </select>
+        </div>
+        <div>
+            <button id="submitButton" type="submit" class="btn btn-primary">Submit</button>
+        </div>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    </form>
+  <div id="myModal" class="modal" role="dialog">
+    <div class="modal-dialog modal-md">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title"><strong>Best Match</strong></h2>
+        </div>
+        <div class="modal-body">
+          <h2 id="matchName"></h2>
+          <img id="matchPhoto" src="" alt="No Image">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <p><a href="/api/friends">API Friends List</a> | <a href="https://github.com/roarkecatubig/FriendFinder">GitHub Repo</a></p>
+    </div>
+  </footer>
+
+</div>
+  
+
+    <!-- Scripts needed for the form to properly submit -->
+    <script src="../data/friends.js"></script>
+
+    <script type="text/javascript">
+
+      $("#submitButton").on("click", function(event) {
+        event.preventDefault();
+              // Form validation
+        function validateForm() {
+          var isValid = true;
+          $(".form-control").each(function() {
+            if ($(this).val() === "") {
+              isValid = false;
+            }
+          });
+
+          return isValid;
+        }
+
+        // If all required fields are filled
+        if (validateForm()) {
+          var scoresArray = [];
+          var q1Score = $("#q1").val();
+          var q2Score = $("#q2").val();
+          var q3Score = $("#q3").val();
+          var q4Score = $("#q4").val();
+          var q5Score = $("#q5").val();
+          var q6Score = $("#q6").val();
+          var q7Score = $("#q7").val();
+          var q8Score = $("#q8").val();
+          var q9Score = $("#q9").val();
+          var q10Score = $("#q10").val();
+          scoresArray = [q1Score, q2Score, q3Score, q4Score, q5Score, q6Score, q7Score, q8Score, q9Score, q10Score]
+          var newCharacter = {
+            name: $("#name").val().trim(),
+            photo: ($("#photo").val().trim()),
+            scores: scoresArray
+          };
+
+          var currentURL = window.location.origin;
+
+          $.post(currentURL + "/api/friends", newCharacter, function(data) {
+            // Use jQuery to 
+            $("#matchName").text(data.name);
+            $("#matchPhoto").attr("src", data.photo);
+
+          });
+
+          $(".modal").modal();
+          
+          $("#name").val("");
+          $("#photo").val("");
+          $("#q1").val("");
+          $("#q2").val("");
+          $("#q3").val("");
+          $("#q4").val("");
+          $("#q5").val("");
+          $("#q6").val("");
+          $("#q7").val("");
+          $("#q8").val("");
+          $("#q9").val("");
+          $("#q10").val("");
+        }
+
+        else {
+          alert("Please fill out all fields before submitting!");
+        }
     
+
+      
+      });
+  </script>
   </body>
 </html>
